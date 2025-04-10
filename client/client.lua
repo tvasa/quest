@@ -29,7 +29,7 @@ RegisterNetEvent("quest:open", function()
 end)
 
 RegisterNUICallback("closeUI", function(data, cb)
-    SetNuiFocus(false, false)  -- Zavře UI a deaktivuje kurzor
+    SetNuiFocus(false, false) 
     cb({})
 end)
 

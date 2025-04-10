@@ -20,7 +20,6 @@ Config.Quests = {
         },
         request = {
             {item = "carrot", quantity = 5},
-            {item = "bandage", quantity = 5}
         }
     },
 }
