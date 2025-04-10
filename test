@@ -14,7 +14,7 @@ body {
 
 .paper {
   background: url("paper.png") no-repeat center center;
-  background-size: cover;
+  background-size: contain;
   width: 600px;
   height: 800px;
   justify-content: center;
@@ -31,13 +31,11 @@ body {
 
 #quest-title {
   text-align: center;
-  padding-top: 15px;
 }
 
 button {
   background-color: #b7a081; /* Světle hnědá barva */
   color: #fff;
-  width: 25%;
   border: none;
   padding: 10px 20px;
   margin: 5px;
@@ -86,3 +84,6 @@ button#close-button:hover {
 }
 
 /* Flexbox pro tlačítka vedle sebe */
+button {
+  width: 25%; /* Tlačítka budou mít šířku 45%, aby se vešla vedle sebe */
+}

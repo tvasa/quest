@@ -2,8 +2,8 @@ Config = Config or {}
 
 Config.Quests = {
     [1] = {
-        title = "Ztracený klobouk",
-        description = "Pan Johnson ztratil klobouk někde u jezera. Pomoz mu ho najít.",
+        title = "Materiál na stavbu",
+        description = "Ahoj, zrovna se hodí, že jdeš okolo. Potřebuju sehnat 5 klacků a 5 kamenů.",
         reward = {
             money = 15,
             items = {

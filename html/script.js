@@ -1,7 +1,8 @@
 window.addEventListener("message", (event) => {
   if (event.data.type === "showQuest") {
-    document.getElementById("quest-text").innerText = event.data.text;
-    document.querySelector("body").style.display = "flex"; // Ukáže tělo UI
+    document.getElementById("quest-text").innerText = event.data.description; // Popis úkolu
+    document.getElementById("quest-title").innerText = event.data.title; // Název úkolu
+    document.querySelector("body").style.display = "flex"; // Ukáže celé UI
   }
 });
 
@@ -14,6 +15,5 @@ document.getElementById("close-button").addEventListener("click", function () {
     body: JSON.stringify({}),
   });
 
-  // Skrýt UI po kliknutí na tlačítko
-  document.querySelector("body").style.display = "none"; // Skrývá celé UI
+  document.querySelector("body").style.display = "none"; // Skryje celé UI
 });
