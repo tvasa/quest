@@ -25,10 +25,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 40px 30px;
-  overflow: hidden; /* zabrání přesahu */
+  overflow: hidden;
 }
 
-/* Nadpis úkolu */
 #quest-title {
   font-size: 28px;
   color: #2e1e1b;
@@ -41,7 +40,6 @@ body {
   word-wrap: break-word;
 }
 
-/* Text úkolu */
 #quest-text {
   font-size: 18px;
   color: #4a2d2f;
@@ -49,23 +47,21 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-height: 300px; /* omezí výšku */
-  overflow-y: auto; /* umožní scroll při větším textu */
+  max-height: 300px;
+  overflow-y: auto;
   padding: 0 10px;
   line-height: 1.4;
 }
 
-/* Kontejner na tlačítka */
 .button-group {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* přesně 2 sloupce */
-  gap: 10px; /* menší mezery mezi tlačítky */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   margin-top: auto;
   margin-left: 50px;
-  padding: 0 10px 10px 90px; /* omezíme prostor zleva i zprava */
+  padding: 0 10px 10px 90px;
 }
 
-/* Tlačítka */
 button {
   background-color: #b7a081;
   color: #fff;
@@ -83,7 +79,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Specifické barvy */
 #accept-button {
   background-color: #6b7c4c;
 }

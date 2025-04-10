@@ -5,10 +5,10 @@ Config.Quests = {
         title = "Materiál na stavbu",
         description = "Ahoj, zrovna se hodí, že jdeš okolo. Potřebuju sehnat 5 klacků a 5 kamenů.",
         reward = {
-            money = 15,
-            items = {
-                {name = "hat", count = 1}
-            }
+            {item = 'apple', quantity = 1, chance = 100},
+        },
+        request = {
+            {item = "wood", quantity = 3,}
         }
     },
 }
