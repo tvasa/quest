@@ -26,3 +26,7 @@ body {
   color: #3b2f1e;
   text-align: center;
 }
+
+#close-button {
+  margin-top: 20px;
+}

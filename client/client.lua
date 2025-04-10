@@ -11,13 +11,4 @@ RegisterNUICallback("closeUI", function(data, cb)
     cb({})
 end)
 
--- Zajistí, že při ukončení resource se UI zavře
-AddEventHandler('onResourceStop', function(resourceName)
-    if resourceName == GetCurrentResourceName() then
-        print("Resource started, ensuring UI is closed")
-        openUi = false
-        SetNuiFocus(false, false)  -- Zavře UI, pokud resource skončí
-    end
-end)
-
 
