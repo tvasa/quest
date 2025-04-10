@@ -59,6 +59,7 @@ end)
         label = Config.Ped.eye.openLabel,
         onSelect = function()
             TriggerEvent("quest:open")
+            TriggerServerEvent('InteractSound_SV:PlayOnSource','quest1', 1.0)
         end
         })
 

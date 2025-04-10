@@ -23,7 +23,7 @@ files {
     'html/index.html',
     'html/script.js',
     'html/style.css',
-    'html/paper.png'
+    'html/paper.png',
 }
 
 lua54 'yes'
