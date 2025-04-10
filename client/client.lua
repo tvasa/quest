@@ -1,16 +1,13 @@
-RegisterCommand("quest", function()
-    local questId = 1  -- Tady můžeš určit, který quest se má zobrazit
-
-    local quest = Config.Quests[questId]  -- Načteme úkol podle ID
+RegisterCommand("openquest", function()
+    local quest = Config.Quests[1]
     if quest then
-        SetNuiFocus(true, true) -- Aktivuje kurzor
+        SetNuiFocus(true, true)
         SendNUIMessage({
-            type = "showQuest",  -- Tento typ odpovídá tomu, co používáš v javascriptu
-            title = quest.title,  -- Posíláme název úkolu
-            description = quest.description  -- Posíláme popis úkolu
+            action = "showQuest",
+            title = quest.title,
+            description = quest.description,
+            request = quest.request
         })
-    else
-        print("Quest not found!")
     end
 end, false)
 
@@ -19,4 +16,6 @@ RegisterNUICallback("closeUI", function(data, cb)
     cb({})
 end)
 
+
+--- spawn NPC pro úkoly
 

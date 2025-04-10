@@ -8,7 +8,8 @@ Config.Quests = {
             {item = 'apple', quantity = 1, chance = 100},
         },
         request = {
-            {item = "wood", quantity = 3,}
+            {item = "carrot", quantity = 5},
+            {item = "bandage", quantity = 5}
         }
     },
 }
