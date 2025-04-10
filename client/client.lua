@@ -1,3 +1,7 @@
+local RSGCore = exports['rsg-core']:GetCoreObject()
+
+
+
 RegisterCommand("openquest", function()
     local quest = Config.Quests[1]
     if quest then
@@ -15,7 +19,4 @@ RegisterNUICallback("closeUI", function(data, cb)
     SetNuiFocus(false, false)  -- Zavře UI a deaktivuje kurzor
     cb({})
 end)
-
-
---- spawn NPC pro úkoly
 
