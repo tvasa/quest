@@ -1,5 +1,6 @@
 * {
   font-family: "Rye", serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,77 +15,99 @@ body {
 
 .paper {
   background: url("paper.png") no-repeat center center;
-  background-size: contain;
+  background-size: cover;
   border-radius: 10px;
-  width: 900px;
-  height: 900px;
-  text-align: center;
+  width: 90%;
+  max-width: 900px;
+  height: 90%;
+  max-height: 900px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Tlačítka budou dole */
+  justify-content: space-between;
+  padding: 40px 30px;
+  overflow: hidden; /* zabrání přesahu */
 }
 
+/* Nadpis úkolu */
 #quest-title {
-  font-size: 24px;
+  font-size: 28px;
   color: #2e1e1b;
-  padding-top: 50px;
-  margin-bottom: 10px; /* Upravíme mezery pro lepší rozvržení */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
   font-weight: bold;
+  word-wrap: break-word;
 }
 
+/* Text úkolu */
 #quest-text {
-  font-size: 16px;
+  font-size: 18px;
   color: #4a2d2f;
-  margin-bottom: 20px; /* Mezery mezi textem a tlačítky */
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-height: 300px; /* omezí výšku */
+  overflow-y: auto; /* umožní scroll při větším textu */
+  padding: 0 10px;
+  line-height: 1.4;
 }
 
+/* Kontejner na tlačítka */
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* přesně 2 sloupce */
+  gap: 10px; /* menší mezery mezi tlačítky */
+  margin-top: auto;
+  margin-left: 50px;
+  padding: 0 10px 10px 90px; /* omezíme prostor zleva i zprava */
+}
+
+/* Tlačítka */
 button {
   background-color: #b7a081;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 12px;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  width: 45%; /* Zvětší šířku tlačítek */
-  max-width: 200px; /* Zajistí, že tlačítka nebudou širší než 200px */
+  width: 70%;
 }
 
 button:hover {
   background-color: #8c6e47;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* Styly pro tlačítka */
-button#accept-button {
+/* Specifické barvy */
+#accept-button {
   background-color: #6b7c4c;
 }
-
-button#accept-button:hover {
+#accept-button:hover {
   background-color: #4e5d3b;
 }
 
-button#again-button {
+#again-button {
   background-color: #bf7c60;
 }
-
-button#again-button:hover {
+#again-button:hover {
   background-color: #9f5a3c;
 }
 
-button#complete-button {
+#complete-button {
   background-color: #84b46a;
 }
-
-button#complete-button:hover {
+#complete-button:hover {
   background-color: #6f8e53;
 }
 
-button#close-button {
+#close-button {
   background-color: #9e4f4b;
 }
-
-button#close-button:hover {
+#close-button:hover {
   background-color: #7a3732;
 }
