@@ -1,11 +1,12 @@
 Config = Config or {}
 
 Config.Ped = {
-    model = "a_m_m_farmer_01",
+    model = 'g_m_m_unibanditos_01',
     coords = vector4(-1235.34, -1233.57, 79.27, 107.66),
     eye = {
         label = "Zaměstnavatel",
         icon = "fa-solid fa-user",
+        openLabel = "Nabídka práce",
     }
 }
 
