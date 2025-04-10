@@ -5,56 +5,60 @@
 body {
   margin: 0;
   padding: 0;
-  background: transparent;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  display: none;
+  visibility: hidden;
 }
 
 .paper {
   background: url("paper.png") no-repeat center center;
-  background-size: cover;
-  width: 600px;
-  height: 800px;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  box-sizing: border-box;
-}
-
-#quest-text {
-  font-size: 20px;
-  color: #3b2f1e;
+  background-size: contain;
+  border-radius: 10px;
+  width: 900px;
+  height: 900px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Tlačítka budou dole */
 }
 
 #quest-title {
-  text-align: center;
-  padding-top: 15px;
+  font-size: 24px;
+  color: #2e1e1b;
+  padding-top: 50px;
+  margin-bottom: 10px; /* Upravíme mezery pro lepší rozvržení */
+  font-weight: bold;
+}
+
+#quest-text {
+  font-size: 16px;
+  color: #4a2d2f;
+  margin-bottom: 20px; /* Mezery mezi textem a tlačítky */
 }
 
 button {
-  background-color: #b7a081; /* Světle hnědá barva */
+  background-color: #b7a081;
   color: #fff;
-  width: 25%;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 45%; /* Zvětší šířku tlačítek */
+  max-width: 200px; /* Zajistí, že tlačítka nebudou širší než 200px */
 }
 
 button:hover {
-  background-color: #8c6e47; /* Tmavší hnědá při najetí */
+  background-color: #8c6e47;
   transform: scale(1.1);
 }
 
-/* Styly pro tlačítka ve spodní části */
+/* Styly pro tlačítka */
 button#accept-button {
-  background-color: #6b7c4c; /* Zelený odstín pro "Přijmout" */
+  background-color: #6b7c4c;
 }
 
 button#accept-button:hover {
@@ -62,7 +66,7 @@ button#accept-button:hover {
 }
 
 button#again-button {
-  background-color: #bf7c60; /* Oranžový odstín pro "Opakovat" */
+  background-color: #bf7c60;
 }
 
 button#again-button:hover {
@@ -70,7 +74,7 @@ button#again-button:hover {
 }
 
 button#complete-button {
-  background-color: #84b46a; /* Zelený odstín pro "Dokončit" */
+  background-color: #84b46a;
 }
 
 button#complete-button:hover {
@@ -78,11 +82,9 @@ button#complete-button:hover {
 }
 
 button#close-button {
-  background-color: #9e4f4b; /* Červený odstín pro "Zavřít" */
+  background-color: #9e4f4b;
 }
 
 button#close-button:hover {
   background-color: #7a3732;
 }
-
-/* Flexbox pro tlačítka vedle sebe */
