@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.paper {
+  background: url("paper.png") no-repeat center center;
+  background-size: contain;
+  width: 600px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+#quest-text {
+  font-family: "serif";
+  font-size: 20px;
+  color: #3b2f1e;
+  text-align: center;
+}
